@@ -1,0 +1,644 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Oxente, RH! — Comunidade de RH do Nordeste</title>
+<meta name="description" content="Oxente, RH! é a comunidade que conecta profissionais, empresas, marcas e soluções de RH do Nordeste. 19 edições desde 2022, liderada por Fabi Assunção.">
+<meta property="og:title" content="Oxente, RH! — Ninguém faz RH sozinho">
+<meta property="og:description" content="Comunidade de RH do Nordeste: encontros presenciais e online, conexão, inspiração e transformação.">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="pt_BR">
+<meta name="theme-color" content="#170C2B">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,300..900&family=Young+Serif&display=swap" rel="stylesheet">
+<link rel="preload" as="image" href="img/hero.webp">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@graph":[
+{"@type":"Organization","name":"Comunidade Oxente, RH!","description":"Comunidade que conecta o ecossistema de RH do Nordeste: pessoas, empresas, marcas e soluções.","foundingDate":"2022","areaServed":"Nordeste do Brasil","sameAs":["https://www.instagram.com/oxente_rh/","https://linktr.ee/oxenterh"],"founder":{"@id":"#fabi"}},
+{"@type":"Person","@id":"#fabi","name":"Fabiana Assunção","alternateName":"Fabi Assunção","jobTitle":"Mentora de Carreiras & RH","sameAs":["https://www.instagram.com/rhporfabi/","https://www.linkedin.com/in/rhporfabi/"]},
+{"@type":"Event","name":"Oxente, RH! Conecta — Encontro online","startDate":"2026-12-05T09:00:00-03:00","endDate":"2026-12-05T13:00:00-03:00","eventAttendanceMode":"https://schema.org/OnlineEventAttendanceMode","eventStatus":"https://schema.org/EventScheduled","location":{"@type":"VirtualLocation","url":"https://linktr.ee/oxenterh"},"organizer":{"@type":"Organization","name":"Comunidade Oxente, RH!"}}
+]}
+</script>
+<style>
+:root{
+  --roxo:#5634A2; --roxo-2:#6B47BE; --noite:#170C2B; --noite-2:#21123D;
+  --coral:#F2784B; --creme:#F4EEE5; --creme-2:#EAE1D3; --cafe:#33201A; --lilas:#C8B6F2;
+  --display:"Archivo",system-ui,sans-serif; --serif:"Young Serif",Georgia,serif;
+  --pad:clamp(20px,5vw,72px); --max:1320px;
+  --ease:cubic-bezier(.2,.7,.1,1);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{-webkit-text-size-adjust:100%}
+body{background:var(--noite);color:var(--creme);font-family:var(--display);font-variation-settings:"wdth" 100;font-size:clamp(16px,1.05vw,18px);line-height:1.55;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+img{display:block;max-width:100%}
+a{color:inherit}
+::selection{background:var(--coral);color:var(--noite)}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 var(--pad)}
+.x{font-stretch:125%;font-variation-settings:"wdth" 125}
+.skip{position:absolute;left:-999px;top:8px;background:var(--coral);color:var(--noite);padding:10px 14px;z-index:99}
+.skip:focus{left:8px}
+:focus-visible{outline:2px solid var(--coral);outline-offset:3px}
+
+/* ---------- marca ---------- */
+.logo{display:inline-flex;flex-direction:column;align-items:flex-start;text-decoration:none;position:relative;padding:.42em .5em .38em;line-height:.86}
+.logo b{font-weight:900;font-variation-settings:"wdth" 118;letter-spacing:-.01em;color:#fff;display:block}
+.logo svg{position:absolute;inset:0;width:100%;height:115%;overflow:visible}
+.logo small{display:none}
+.nav .logo{font-size:13px}
+
+/* ---------- nav ---------- */
+.nav{position:fixed;inset:0 0 auto 0;z-index:50;transition:background .4s var(--ease),transform .4s var(--ease)}
+.nav.solid{background:rgba(23,12,43,.86);backdrop-filter:saturate(1.4) blur(12px);-webkit-backdrop-filter:saturate(1.4) blur(12px)}
+.nav.hide{transform:translateY(-100%)}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;height:76px}
+.nav ul{display:flex;gap:30px;list-style:none;font-size:14px;letter-spacing:.01em}
+.nav ul a{text-decoration:none;opacity:.78;transition:opacity .2s}
+.nav ul a:hover{opacity:1}
+.btn{display:inline-flex;align-items:center;gap:.6em;font:600 15px/1 var(--display);text-decoration:none;padding:16px 22px;border-radius:2px;transition:transform .35s var(--ease),background .25s,color .25s;white-space:nowrap}
+.btn svg{width:16px;height:16px;transition:transform .35s var(--ease)}
+.btn:hover svg{transform:translateX(4px)}
+.btn-coral{background:var(--coral);color:var(--noite)}
+.btn-coral:hover{background:#ff8c60}
+.btn-line{border:1.5px solid currentColor;padding:14.5px 20px}
+.btn-line:hover{background:var(--creme);color:var(--noite);border-color:var(--creme)}
+.nav .btn{padding:12px 16px;font-size:14px}
+.menu-t{display:none;background:none;border:0;color:var(--creme);font:600 14px var(--display);cursor:pointer}
+
+/* ---------- HERO ---------- */
+.hero{position:relative;min-height:100svh;display:flex;align-items:flex-end;overflow:hidden;isolation:isolate}
+.hero-img{position:absolute;inset:0;z-index:-2}
+.hero-img img{width:100%;height:100%;object-fit:cover;object-position:62% 40%;transform-origin:62% 40%}
+.hero::before{content:"";position:absolute;inset:0;z-index:-1;background:
+  linear-gradient(90deg,var(--noite) 0%,rgba(23,12,43,.92) 30%,rgba(23,12,43,.35) 62%,rgba(23,12,43,.15) 100%),
+  linear-gradient(0deg,var(--noite) 0%,rgba(23,12,43,0) 42%)}
+.hero .wrap{width:100%;padding-top:140px;padding-bottom:clamp(36px,6vh,64px)}
+.hero-lead{font-size:clamp(15px,1.1vw,17px);color:var(--lilas);margin-bottom:28px;display:flex;align-items:center;gap:12px}
+.hero-lead i{display:inline-block;width:8px;height:8px;background:var(--coral);border-radius:50%}
+.h1{font-weight:850;font-variation-settings:"wdth" 120;font-size:clamp(52px,9.4vw,152px);line-height:.88;letter-spacing:-.025em;max-width:11ch}
+.h1 .ln{display:block;overflow:hidden;padding-bottom:.06em}
+.h1 .ln>span{display:inline-block}
+.bub{position:relative;display:inline-block}
+.bub svg{position:absolute;left:-.12em;top:.02em;width:calc(100% + .26em);height:calc(100% + .26em);overflow:visible;pointer-events:none}
+.bub path{fill:none;stroke:var(--coral);stroke-width:3;stroke-linejoin:miter}
+.hero-foot{display:grid;grid-template-columns:minmax(0,1.1fr) auto;gap:40px;align-items:end;margin-top:clamp(44px,6vh,64px)}
+.hero-sub{max-width:52ch;font-size:clamp(17px,1.35vw,21px);line-height:1.5;color:rgba(244,238,229,.86)}
+.hero-cta{display:flex;gap:12px;flex-wrap:wrap}
+.facts{display:grid;grid-template-columns:repeat(4,1fr);margin-top:clamp(36px,6vh,72px);border-top:1px solid rgba(244,238,229,.18)}
+.facts div{padding:20px 20px 0 0}
+.facts strong{display:block;font-weight:800;font-variation-settings:"wdth" 118;font-size:clamp(26px,2.6vw,40px);line-height:1;color:#fff}
+.facts span{display:block;font-size:13.5px;color:rgba(244,238,229,.62);margin-top:8px}
+.scroll-cue{position:absolute;right:var(--pad);bottom:clamp(36px,6vh,64px);writing-mode:vertical-rl;font-size:12px;letter-spacing:.14em;color:rgba(244,238,229,.5);display:flex;align-items:center;gap:12px}
+.scroll-cue::after{content:"";width:1px;height:56px;background:linear-gradient(var(--coral),transparent)}
+
+/* rabicho de balão entre dobras */
+.tail{position:relative}
+.tail::after{content:"";position:absolute;left:clamp(40px,12vw,180px);bottom:-38px;width:56px;height:40px;background:inherit;clip-path:polygon(0 0,100% 0,0 100%);z-index:3}
+
+/* ---------- MANIFESTO ---------- */
+.creme{background:var(--creme);color:var(--cafe)}
+.manifesto{padding-top:clamp(110px,16vh,190px);padding-bottom:clamp(80px,12vh,140px)}
+.kicker{font:400 clamp(15px,1.1vw,17px)/1.3 var(--serif);color:var(--roxo);margin-bottom:28px}
+.big-quote{font-weight:700;font-variation-settings:"wdth" 112;font-size:clamp(34px,5.4vw,84px);line-height:1;letter-spacing:-.02em;max-width:17ch}
+.big-quote .ln{display:block;overflow:hidden;padding-bottom:.08em}
+.big-quote .ln>span{display:inline-block}
+.big-quote em{font-style:normal;color:var(--roxo)}
+.origin{display:grid;grid-template-columns:repeat(12,1fr);gap:24px;margin-top:clamp(56px,9vh,110px)}
+.origin p{grid-column:6/span 6;font-size:clamp(18px,1.45vw,22px);line-height:1.55}
+.origin p+p{grid-column:6/span 5;font-size:16.5px;color:rgba(51,32,26,.72);margin-top:-6px}
+.origin .yr{grid-column:1/span 4;grid-row:1/span 2;font:400 clamp(90px,13vw,200px)/.8 var(--serif);color:var(--roxo);letter-spacing:-.03em}
+.origin .yr small{display:block;font:500 14px/1.4 var(--display);color:rgba(51,32,26,.6);margin-top:16px;letter-spacing:0}
+
+/* pilares (sticky) */
+.pillars{display:grid;grid-template-columns:5fr 7fr;gap:clamp(30px,5vw,80px);padding-top:clamp(40px,8vh,90px);padding-bottom:clamp(110px,16vh,180px)}
+.p-sticky{position:sticky;top:18vh;height:max-content}
+.p-sticky .lbl{font-size:14px;color:rgba(51,32,26,.6);margin-bottom:18px}
+.p-words{position:relative;height:1.32em;overflow:hidden;font-size:clamp(34px,4vw,64px)}
+.p-words span{position:absolute;left:0;top:0;white-space:nowrap;font-weight:850;font-variation-settings:"wdth" 108;font-size:1em;line-height:1.18;letter-spacing:-.02em;color:var(--roxo);transform:translateY(105%);transition:transform .7s var(--ease)}
+.p-words span.on{transform:none}
+.p-words span.out{transform:translateY(-105%)}
+.p-dots{display:flex;gap:8px;margin-top:26px}
+.p-dots i{width:34px;height:3px;background:rgba(86,52,162,.18);transition:background .4s}
+.p-dots i.on{background:var(--coral)}
+.p-item{min-height:72vh;display:flex;flex-direction:column;justify-content:center;gap:26px}
+.p-item figure{overflow:hidden;aspect-ratio:3/2;background:var(--creme-2)}
+.p-item figure img{width:100%;height:100%;object-fit:cover}
+.p-item .n{font:400 15px var(--serif);color:var(--coral)}
+.p-item h3{display:none}
+.p-item p{font-size:clamp(18px,1.4vw,21px);max-width:44ch}
+
+/* ---------- PARA QUEM ---------- */
+.quem{background:var(--roxo);color:#fff;padding:clamp(110px,16vh,180px) 0 clamp(90px,14vh,160px)}
+.sec-head{display:grid;grid-template-columns:repeat(12,1fr);gap:24px;align-items:end;margin-bottom:clamp(48px,8vh,90px)}
+.sec-head h2{grid-column:1/span 7;font-weight:800;font-variation-settings:"wdth" 118;font-size:clamp(40px,5.2vw,82px);line-height:.95;letter-spacing:-.022em}
+.sec-head p{grid-column:9/span 4;font-size:17px;opacity:.82}
+.quem .kicker{color:var(--lilas)}
+.rows{border-top:1px solid rgba(255,255,255,.22)}
+.row{display:grid;grid-template-columns:72px minmax(0,5fr) minmax(0,5fr) 150px;gap:24px;align-items:center;padding:34px 0;border-bottom:1px solid rgba(255,255,255,.22);position:relative;text-decoration:none;isolation:isolate}
+.row::before{content:"";position:absolute;inset:0 calc(var(--pad) * -1);background:var(--noite);transform:scaleY(0);transform-origin:bottom;transition:transform .5s var(--ease);z-index:-1}
+.row:hover::before{transform:scaleY(1)}
+.row{}
+.row .i{font:400 16px var(--serif);color:var(--coral)}
+.row h3{font-weight:800;font-variation-settings:"wdth" 120;font-size:clamp(30px,3.6vw,56px);line-height:1;letter-spacing:-.02em}
+.row p{font-size:16.5px;opacity:.86;max-width:46ch}
+.row .go{justify-self:end;font-size:14px;display:flex;gap:8px;align-items:center;color:var(--coral);font-weight:600}
+.row .go svg{width:16px;transition:transform .35s var(--ease)}
+.row:hover .go svg{transform:translateX(5px)}
+
+/* ---------- FORMATOS ---------- */
+.formatos{padding:clamp(110px,16vh,180px) 0}
+.formatos .sec-head h2{color:var(--cafe)}
+.formatos .sec-head p{color:rgba(51,32,26,.75);opacity:1}
+.ticket{display:grid;grid-template-columns:minmax(0,1fr) 300px;background:var(--noite);color:var(--creme);position:relative;margin-bottom:clamp(60px,9vh,110px)}
+.ticket::before,.ticket::after{content:"";position:absolute;right:300px;width:28px;height:28px;border-radius:50%;background:var(--creme);transform:translateX(50%)}
+.ticket::before{top:-14px}.ticket::after{bottom:-14px}
+.t-main{padding:clamp(28px,4vw,56px);display:grid;gap:22px}
+.t-tag{display:inline-flex;align-items:center;gap:10px;font-size:14px;color:var(--lilas)}
+.t-tag i{width:8px;height:8px;border-radius:50%;background:#7BE495;box-shadow:0 0 0 0 rgba(123,228,149,.6);animation:pulse 2.2s infinite}
+@keyframes pulse{70%{box-shadow:0 0 0 10px rgba(123,228,149,0)}100%{box-shadow:0 0 0 0 rgba(123,228,149,0)}}
+.t-main h3{font-weight:850;font-variation-settings:"wdth" 120;font-size:clamp(36px,4.6vw,72px);line-height:.92;letter-spacing:-.022em}
+.t-main h3 span{color:var(--coral)}
+.t-main p{max-width:52ch;color:rgba(244,238,229,.8)}
+.t-side{border-left:2px dashed rgba(244,238,229,.25);padding:clamp(28px,3vw,44px);display:flex;flex-direction:column;justify-content:space-between;gap:24px}
+.t-date{font:400 clamp(64px,6vw,96px)/.85 var(--serif);color:#fff}
+.t-date small{display:block;font:600 15px/1.3 var(--display);color:var(--coral);margin-top:10px;letter-spacing:.02em}
+.t-meta{font-size:14.5px;line-height:1.6;color:rgba(244,238,229,.75)}
+.fmt{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 clamp(30px,5vw,80px)}
+.fmt article{padding:30px 0 34px;border-top:1px solid rgba(51,32,26,.18);display:grid;grid-template-columns:52px 1fr;gap:6px 18px}
+.fmt .n{font:400 15px var(--serif);color:var(--coral);padding-top:6px}
+.fmt h3{font-weight:800;font-variation-settings:"wdth" 115;font-size:clamp(22px,1.8vw,28px);line-height:1.1;color:var(--cafe)}
+.fmt p{grid-column:2;color:rgba(51,32,26,.75);font-size:16.5px}
+
+/* ---------- EDIÇÕES (horizontal) ---------- */
+.edicoes{background:var(--noite);overflow:hidden;position:relative}
+.ed-pin{height:100svh;display:flex;flex-direction:column;justify-content:center;gap:clamp(24px,4vh,44px);padding:90px 0 40px}
+.ed-head{display:flex;justify-content:space-between;align-items:end;gap:30px}
+.ed-head h2{font-weight:850;font-variation-settings:"wdth" 120;font-size:clamp(40px,5.2vw,82px);line-height:.92;letter-spacing:-.022em}
+.ed-head h2 span{color:var(--coral)}
+.ed-head p{max-width:34ch;color:rgba(244,238,229,.7);font-size:16.5px}
+.track{display:flex;gap:clamp(14px,1.6vw,24px);padding-left:var(--pad);will-change:transform}
+.shot{flex:none;margin:0;position:relative}
+.shot img{height:clamp(300px,52vh,560px);width:auto;object-fit:cover;filter:saturate(.95)}
+.shot.tall img{aspect-ratio:9/14}
+.shot.wide img{aspect-ratio:3/2}
+.shot figcaption{margin-top:14px;font-size:14px;color:rgba(244,238,229,.66);display:flex;gap:10px}
+.shot figcaption b{color:var(--coral);font:400 14px var(--serif)}
+.shot.end{width:clamp(280px,30vw,420px);display:flex;flex-direction:column;justify-content:center;padding-right:var(--pad)}
+.shot.end p{font:400 clamp(26px,2.4vw,38px)/1.15 var(--serif);color:var(--creme)}
+.shot.end p span{color:var(--coral)}
+.ed-progress{position:absolute;left:var(--pad);right:var(--pad);bottom:30px;height:2px;background:rgba(244,238,229,.12)}
+.ed-progress i{display:block;height:100%;width:100%;background:var(--coral);transform:scaleX(0);transform-origin:left}
+
+/* ---------- FABI ---------- */
+.fabi{padding:clamp(110px,16vh,190px) 0 clamp(100px,14vh,170px);position:relative}
+.fabi-grid{display:grid;grid-template-columns:repeat(12,1fr);gap:24px;align-items:start}
+.fabi-media{grid-column:1/span 5;position:relative;padding-bottom:22%}
+.fabi-media .main{width:82%;aspect-ratio:436/700;object-fit:cover;object-position:50% 10%}
+.fabi-media .sec{position:absolute;right:0;bottom:0;width:46%;aspect-ratio:3/4;object-fit:cover;object-position:40% 20%;border:10px solid var(--creme)}
+.fabi-media .tagname{position:absolute;left:-10px;top:40px;writing-mode:vertical-rl;transform:rotate(180deg);font-size:12.5px;letter-spacing:.14em;color:rgba(51,32,26,.55)}
+.fabi-txt{grid-column:7/span 6;padding-top:20px}
+.fabi-txt h2{font-weight:850;font-variation-settings:"wdth" 122;font-size:clamp(50px,7vw,116px);line-height:.86;letter-spacing:-.03em;color:var(--roxo)}
+.fabi-txt .role{font-size:17px;margin:22px 0 34px;color:rgba(51,32,26,.72)}
+.fabi-txt blockquote{font:400 clamp(26px,2.5vw,38px)/1.18 var(--serif);color:var(--cafe);padding-left:22px;border-left:3px solid var(--coral);margin-bottom:34px}
+.fabi-txt .bio{font-size:17.5px;max-width:52ch;margin-bottom:38px}
+.cred{list-style:none;border-top:1px solid rgba(51,32,26,.18);margin-bottom:40px}
+.cred li{display:grid;grid-template-columns:150px 1fr;gap:20px;padding:16px 0;border-bottom:1px solid rgba(51,32,26,.18);font-size:16px}
+.cred li span{font:400 14.5px/1.5 var(--serif);color:var(--roxo)}
+.fabi-cta{display:flex;gap:12px;flex-wrap:wrap}
+.creme .btn-line{color:var(--cafe)}
+.creme .btn-line:hover{background:var(--cafe);color:var(--creme);border-color:var(--cafe)}
+
+/* ---------- PARTICIPAR ---------- */
+.part{background:var(--coral);color:var(--noite);padding:clamp(110px,16vh,180px) 0 clamp(100px,14vh,160px)}
+.part h2{font-weight:850;font-variation-settings:"wdth" 120;font-size:clamp(40px,5.8vw,92px);line-height:.92;letter-spacing:-.025em;max-width:15ch}
+.part .lead{font:400 clamp(20px,1.8vw,26px)/1.3 var(--serif);max-width:36ch;margin:30px 0 clamp(56px,9vh,96px)}
+.paths{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));border-top:2px solid var(--noite)}
+.path{padding:30px 26px 34px 0;display:flex;flex-direction:column;gap:14px;text-decoration:none;position:relative}
+.path+.path{padding-left:26px;border-left:1px solid rgba(23,12,43,.25)}
+.path .n{font:400 clamp(54px,5vw,80px)/.9 var(--serif)}
+.path h3{font-weight:800;font-variation-settings:"wdth" 112;font-size:21px;line-height:1.15}
+.path p{font-size:15.5px;color:rgba(23,12,43,.78);flex:1}
+.path .go{font-weight:700;font-size:14.5px;display:flex;align-items:center;gap:8px;margin-top:10px}
+.path .go svg{width:16px;transition:transform .35s var(--ease)}
+.path:hover .go svg{transform:translateX(5px)}
+.voz{margin-top:clamp(70px,10vh,110px);display:grid;grid-template-columns:repeat(12,1fr);gap:24px;align-items:center}
+.voz img{grid-column:1/span 3;aspect-ratio:3/4;object-fit:cover;object-position:50% 40%}
+.voz blockquote{grid-column:5/span 7;font:400 clamp(24px,2.5vw,38px)/1.2 var(--serif)}
+.voz cite{display:block;font:500 14.5px var(--display);font-style:normal;margin-top:18px;opacity:.75}
+
+/* ---------- APOIADORES ---------- */
+.apoio{background:var(--noite);padding:clamp(70px,10vh,100px) 0;border-bottom:1px solid rgba(244,238,229,.1)}
+.apoio .lbl{font-size:14px;color:rgba(244,238,229,.6);margin-bottom:28px}
+.marq{overflow:hidden;mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent)}
+.marq-in{display:flex;gap:64px;width:max-content;animation:marq 38s linear infinite}
+.marq-in span{font-weight:700;font-variation-settings:"wdth" 112;font-size:clamp(22px,2.2vw,34px);color:rgba(244,238,229,.82);white-space:nowrap;display:flex;align-items:center;gap:64px}
+.marq-in span::after{content:"";width:9px;height:9px;background:var(--coral);transform:rotate(45deg)}
+@keyframes marq{to{transform:translateX(-50%)}}
+
+/* ---------- FINAL ---------- */
+.final{background:var(--noite);padding:clamp(110px,18vh,200px) 0 40px;position:relative;overflow:hidden}
+.final h2{font-weight:900;font-variation-settings:"wdth" 125;font-size:clamp(64px,13vw,220px);line-height:.84;letter-spacing:-.035em}
+.final h2 span{color:var(--coral)}
+.final-row{display:grid;grid-template-columns:repeat(12,1fr);gap:24px;margin-top:clamp(40px,6vh,64px);align-items:end}
+.final-row p{grid-column:1/span 5;font-size:18px;color:rgba(244,238,229,.78)}
+.final-row .hero-cta{grid-column:8/span 5;justify-content:flex-end}
+footer{margin-top:clamp(90px,14vh,150px);padding-top:30px;border-top:1px solid rgba(244,238,229,.14);display:grid;grid-template-columns:auto 1fr auto;gap:40px;align-items:start;font-size:14.5px;color:rgba(244,238,229,.66)}
+footer .logo{font-size:20px}
+footer nav{display:flex;gap:28px;justify-content:center;flex-wrap:wrap}
+footer a{text-decoration:none}
+footer a:hover{color:#fff}
+footer .legal{grid-column:1/-1;display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;font-size:13px;color:rgba(244,238,229,.45);padding-top:24px}
+
+/* reveal */
+.rv{opacity:0;transform:translateY(28px)}
+.no-js .rv,.reduced .rv{opacity:1;transform:none}
+.no-js .h1 .ln:last-child,.reduced .h1 .ln:last-child,.h1 .ln.open{overflow:visible}
+
+/* ---------- RESPONSIVO ---------- */
+@media (max-width:1024px){
+  .nav ul{display:none}
+  .hero-foot{grid-template-columns:1fr}
+  .row{grid-template-columns:52px 1fr;gap:10px 18px;align-items:start;padding:28px 0}
+  .row .i{padding-top:8px}
+  .row p{grid-column:2}
+  .row .go{grid-column:2;justify-self:start}
+  .paths{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .path:nth-child(3){padding-left:0;border-left:0}
+  .path:nth-child(n+3){border-top:1px solid rgba(23,12,43,.25)}
+  .fabi-media{grid-column:1/span 12;max-width:560px}
+  .fabi-txt{grid-column:1/span 12}
+}
+@media (max-width:760px){
+  .nav .wrap{height:64px}
+  .nav .btn{padding:10px 13px;font-size:13px}
+  .hero{align-items:flex-end}
+  .hero-img img{object-position:66% 30%}
+  .hero::before{background:linear-gradient(0deg,var(--noite) 0%,rgba(23,12,43,.94) 46%,rgba(23,12,43,.25) 78%,rgba(23,12,43,.35) 100%)}
+  .hero .wrap{padding-top:52vh}
+  .h1{font-size:clamp(46px,14vw,72px)}
+  .facts{grid-template-columns:repeat(2,1fr)}
+  .facts div{padding:18px 12px 0 0}
+  .scroll-cue{display:none}
+  .hero-cta .btn{flex:1;justify-content:center}
+  .big-quote{font-size:clamp(25px,7.3vw,34px)}
+  .origin{display:block}
+  .origin .yr{margin-bottom:28px}
+  .origin p+p{margin-top:16px}
+  .pillars{grid-template-columns:1fr}
+  .p-sticky{display:none}
+  .p-item{min-height:0;padding-bottom:44px}
+  .p-item h3{display:block;font-weight:850;font-variation-settings:"wdth" 104;font-size:clamp(32px,10vw,40px);line-height:1;color:var(--roxo);letter-spacing:-.02em}
+  .sec-head{display:block}
+  .sec-head p{margin-top:20px}
+  .ticket{grid-template-columns:1fr}
+  .ticket::before,.ticket::after{display:none}
+  .t-side{border-left:0;border-top:2px dashed rgba(244,238,229,.25);flex-direction:row;align-items:end}
+  .fmt{grid-template-columns:1fr}
+  .ed-pin{height:auto;padding:100px 0 70px}
+  .ed-head{flex-direction:column;align-items:flex-start}
+  .track{overflow-x:auto;scroll-snap-type:x mandatory;scroll-padding-left:var(--pad);padding-right:var(--pad);-webkit-overflow-scrolling:touch;scrollbar-width:none}
+  .track::-webkit-scrollbar{display:none}
+  .shot{scroll-snap-align:start}
+  .shot img{height:380px}
+  .ed-progress{display:none}
+  .cred li{grid-template-columns:1fr;gap:4px}
+  .paths{grid-template-columns:1fr}
+  .path,.path+.path{padding:26px 0 30px;border-left:0}
+  .path+.path{border-top:1px solid rgba(23,12,43,.25)}
+  .voz{display:block}
+  .voz img{width:46%;margin-bottom:26px}
+  .final-row{display:block}
+  .final-row .hero-cta{margin-top:28px;justify-content:flex-start}
+  footer{grid-template-columns:1fr;gap:24px}
+  footer nav{justify-content:flex-start}
+  .tail::after{width:40px;height:30px;bottom:-28px}
+}
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation:none!important;transition:none!important}
+  .marq-in{animation:none}
+}
+</style>
+</head>
+<body class="no-js">
+<a class="skip" href="#conteudo">Pular para o conteúdo</a>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="arr" viewBox="0 0 16 16"><path d="M1 8h13M9 3l5 5-5 5" fill="none" stroke="currentColor" stroke-width="1.8"/></symbol>
+</svg>
+
+<header class="nav" id="nav">
+  <div class="wrap">
+    <a class="logo" href="#topo" aria-label="Oxente, RH! — início">
+      <svg viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true"><path d="M100 30 V0 H0 V86 H70 L60 100 L82 86 H100 V62" fill="none" stroke="#F2784B" stroke-width="2.2" vector-effect="non-scaling-stroke"/></svg>
+      <b>OXE</b><b>NTE,</b><b>RH!</b>
+    </a>
+    <ul>
+      <li><a href="#o-que-e">O que é</a></li>
+      <li><a href="#para-quem">Para quem é</a></li>
+      <li><a href="#formatos">Encontros</a></li>
+      <li><a href="#fabi">Fabi Assunção</a></li>
+    </ul>
+    <a class="btn btn-coral" href="#participar">Quero participar <svg><use href="#arr"/></svg></a>
+  </div>
+</header>
+
+<main id="conteudo">
+
+<!-- HERO -->
+<section class="hero tail" id="topo" style="background:var(--noite)">
+  <div class="hero-img"><img src="img/hero.webp" alt="Fabi Assunção ao microfone no palco do Oxente, RH!, diante da plateia, com a marca projetada no telão" fetchpriority="high"></div>
+  <div class="wrap">
+    <h1 class="h1" aria-label="Ninguém faz RH sozinho.">
+      <span class="ln"><span>Ninguém</span></span>
+      <span class="ln"><span>faz RH</span></span>
+      <span class="ln"><span><span class="bub">sozinho.<svg aria-hidden="true"><path id="bubPath" pathLength="1" d=""/></svg></span></span></span>
+    </h1>
+    <div class="hero-foot">
+      <p class="hero-sub">O Oxente, RH! conecta o ecossistema de RH do Nordeste — pessoas, empresas, marcas e soluções — em encontros que viram rede de apoio, repertório e oportunidade.</p>
+      <div class="hero-cta">
+        <a class="btn btn-coral" href="#participar">Quero ser Oxenteiro(a) <svg><use href="#arr"/></svg></a>
+        <a class="btn btn-line" href="#o-que-e">Entender a comunidade</a>
+      </div>
+    </div>
+    <div class="facts" aria-label="O Oxente, RH! em números">
+      <div><strong>19</strong><span>edições realizadas</span></div>
+      <div><strong>2022</strong><span>ano em que tudo começou</span></div>
+      <div><strong>3 capitais</strong><span>Recife, Maceió e Natal</span></div>
+      <div><strong>14 mil+</strong><span>Oxenteiros no Instagram</span></div>
+    </div>
+  </div>
+  <div class="scroll-cue" aria-hidden="true">ROLE</div>
+</section>
+
+<!-- O QUE É -->
+<section class="creme" id="o-que-e">
+  <div class="wrap manifesto">
+    <p class="big-quote" id="manif"><span class="ln"><span>Você não precisa de</span></span><span class="ln"><span>mais um curso de RH.</span></span><span class="ln"><span>Precisa de <em>um encontro</em></span></span><span class="ln"><span><em>como esse.</em></span></span></p>
+    <div class="origin">
+      <div class="yr rv">2022<small>o ano em que duas especialistas de RH decidiram parar de enfrentar a profissão sozinhas.</small></div>
+      <p class="rv">Muita gente de RH vive os desafios e as conquistas da profissão de forma solitária. O Oxente, RH! nasceu para mudar isso: um ambiente acolhedor, com sotaque nordestino, onde a experiência de um vira aprendizado de todos.</p>
+      <p class="rv">Hoje são 19 edições presenciais, encontros online e uma cultura própria — a dos Oxenteiros — que segue conectando gente bem depois que o evento acaba.</p>
+    </div>
+  </div>
+
+  <div class="wrap pillars">
+    <div class="p-sticky" aria-hidden="true">
+      <p class="lbl">Cada encontro é construído em três momentos</p>
+      <div class="p-words"><span class="on">Conexão.</span><span>Inspiração.</span><span>Transformação.</span></div>
+      <div class="p-dots"><i class="on"></i><i></i><i></i></div>
+    </div>
+    <div>
+      <article class="p-item" data-i="0">
+        <figure><img src="img/selfie.webp" alt="Grupo de Oxenteiras sorrindo para uma selfie durante um encontro, com crachás 'Orgulho de ser Oxenteira'" loading="lazy"></figure>
+        <span class="n">01 — Conexão</span><h3>Conexão.</h3>
+        <p>Aqui ninguém precisa chegar conhecendo todo mundo. É chegando que a gente se conecta: networking de verdade com quem vive os mesmos dilemas que você.</p>
+      </article>
+      <article class="p-item" data-i="1">
+        <figure><img src="img/crowd.webp" alt="Participante fala ao microfone para a plateia do Oxente, RH!, com o telão da comunidade ao fundo" loading="lazy"></figure>
+        <span class="n">02 — Inspiração</span><h3>Inspiração.</h3>
+        <p>Histórias reais de conquista e superação, contadas por quem está no dia a dia do RH — no palco e na plateia, porque aqui o microfone circula.</p>
+      </article>
+      <article class="p-item" data-i="2">
+        <figure><img src="img/palco.webp" alt="Turma reunida ao final do workshop R&S com Raiz" loading="lazy"></figure>
+        <span class="n">03 — Transformação</span><h3>Transformação.</h3>
+        <p>Conteúdo relevante e prático, com especialistas e tendências do mercado, para você voltar na segunda-feira fazendo diferente.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- PARA QUEM -->
+<section class="quem tail" id="para-quem">
+  <div class="wrap">
+    <div class="sec-head">
+      <div style="grid-column:1/span 8"><h2 class="rv">Um ecossistema. Quatro portas de entrada.</h2></div>
+      <p class="rv">O Oxente, RH! movimenta o mercado de Recursos Humanos do Nordeste aproximando quem faz, quem contrata, quem apoia e quem resolve.</p>
+    </div>
+    <div class="rows">
+      <a class="row rv" href="#participar"><span class="i">01</span><h3>Pessoas</h3><p>Profissionais de RH — do início de carreira à liderança — que querem repertório, rede de apoio e acesso às tendências do mercado.</p><span class="go">Participar <svg><use href="#arr"/></svg></span></a>
+      <a class="row rv" href="#participar"><span class="i">02</span><h3>Empresas</h3><p>Organizações que querem desenvolver seus times de RH e se aproximar de quem está construindo a gestão de pessoas na região.</p><span class="go">Levar o time <svg><use href="#arr"/></svg></span></a>
+      <a class="row rv" href="#participar"><span class="i">03</span><h3>Marcas</h3><p>Patrocinadores e apoiadores que querem estar presentes, com propósito, nos encontros de uma comunidade engajada.</p><span class="go">Ser parceiro <svg><use href="#arr"/></svg></span></a>
+      <a class="row rv" href="#participar"><span class="i">04</span><h3>Soluções</h3><p>Fornecedores de serviços, tecnologia e consultoria para RH que querem gerar conexões qualificadas e negócio.</p><span class="go">Apresentar solução <svg><use href="#arr"/></svg></span></a>
+    </div>
+  </div>
+</section>
+
+<!-- FORMATOS -->
+<section class="creme formatos" id="formatos">
+  <div class="wrap">
+    <div class="sec-head">
+      <div style="grid-column:1/span 8"><h2 class="rv">Encontros que cabem no seu sábado — e ficam na sua carreira.</h2></div>
+      <p class="rv">Formatos presenciais e online, itinerantes pelo Nordeste, sempre com a mesma essência: conectar gente.</p>
+    </div>
+
+    <div class="ticket rv" aria-label="Próximo encontro">
+      <div class="t-main">
+        <span class="t-tag"><i></i>Próximo encontro · inscrições pelo link oficial</span>
+        <h3>Oxente, RH! <span>Conecta</span></h3>
+        <p>Encontro online e ao vivo. Gente que conecta gente: quatro horas de troca, conteúdo e networking, de onde você estiver.</p>
+        <div><a class="btn btn-coral" href="https://linktr.ee/oxenterh" target="_blank" rel="noopener">Garantir minha vaga <svg><use href="#arr"/></svg></a></div>
+      </div>
+      <div class="t-side">
+        <div class="t-date">05<small>DEZ · SÁBADO</small></div>
+        <div class="t-meta">9h às 13h<br>Online, ao vivo</div>
+      </div>
+    </div>
+
+    <div class="fmt">
+      <article class="rv"><span class="n">i.</span><h3>Encontros presenciais</h3><p>Manhãs de sábado em formato itinerante — Recife, Maceió, Natal — com momentos de conexão, inspiração e transformação.</p></article>
+      <article class="rv"><span class="n">ii.</span><h3>Encontros online</h3><p>O Oxente, RH! Conecta leva a experiência da comunidade para quem está em qualquer lugar do Nordeste e do Brasil.</p></article>
+      <article class="rv"><span class="n">iii.</span><h3>Workshops e imersões</h3><p>Formatos práticos e aprofundados, como o Workshop R&amp;S com Raiz e a Imersão Sem Migué, RH!, com turmas reduzidas.</p></article>
+      <article class="rv"><span class="n">iv.</span><h3>Comunidade o ano inteiro</h3><p>Conteúdo, o quadro “Fala, Oxenteiro”, embaixadores e palestrantes da própria comunidade — a conexão não para entre um encontro e outro.</p></article>
+    </div>
+  </div>
+</section>
+
+<!-- EDIÇÕES -->
+<section class="edicoes" id="edicoes">
+  <div class="ed-pin">
+    <div class="wrap ed-head">
+      <h2 class="rv">19 edições.<br><span>Uma só cultura.</span></h2>
+      <p class="rv">Em cada cidade, o mesmo jeito de fazer: chegar como participante, sair como Oxenteiro(a).</p>
+    </div>
+    <div class="track" id="track">
+      <figure class="shot wide"><img src="img/maceio.webp" alt="Foto oficial da 18ª edição do Oxente, RH! em Maceió, com dezenas de participantes" loading="lazy"><figcaption><b>18ª</b> Edição Maceió · 2026</figcaption></figure>
+      <figure class="shot tall"><img src="img/abraco.webp" alt="Duas participantes se abraçam sorrindo durante um encontro" loading="lazy"><figcaption><b>—</b> Reencontros que viram amizade</figcaption></figure>
+      <figure class="shot wide"><img src="img/marca.webp" alt="Arara com camisetas da comunidade, placa com a bandeira de Pernambuco e banner Oxente, RH! conexões que importam" loading="lazy"><figcaption><b>—</b> Feito no Nordeste, com orgulho</figcaption></figure>
+      <figure class="shot tall"><img src="img/fabimic.webp" alt="Fabi Assunção conduzindo um encontro ao microfone" loading="lazy"><figcaption><b>—</b> Fabi Assunção na condução</figcaption></figure>
+      <figure class="shot wide"><img src="img/crowd.webp" alt="Plateia atenta enquanto uma participante fala ao microfone" loading="lazy"><figcaption><b>—</b> Aqui o microfone circula</figcaption></figure>
+      <div class="shot end"><p>A próxima foto <span>pode ter você nela.</span></p><div style="margin-top:26px"><a class="btn btn-coral" href="#participar">Como participar <svg><use href="#arr"/></svg></a></div></div>
+    </div>
+    <div class="ed-progress" aria-hidden="true"><i id="edBar"></i></div>
+  </div>
+</section>
+
+<!-- FABI -->
+<section class="creme fabi tail" id="fabi">
+  <div class="wrap fabi-grid">
+    <div class="fabi-media rv">
+      <span class="tagname">LÍDER DA COMUNIDADE</span>
+      <img class="main" src="img/fabi.webp" alt="Retrato de Fabi Assunção com a camiseta 'Pessoas que conectam, inspiram e transformam'" loading="lazy">
+      <img class="sec" src="img/hero.webp" alt="" loading="lazy" aria-hidden="true">
+    </div>
+    <div class="fabi-txt">
+      <p class="kicker rv">Quem conduz</p>
+      <h2 class="rv">Fabi<br>Assunção</h2>
+      <p class="role rv">Cofundadora e líder da Comunidade Oxente, RH! · Mentora de Carreiras &amp; RH · Recrutamento e Seleção</p>
+      <blockquote class="rv">“Desenvolvo pessoas que geram resultados.”</blockquote>
+      <p class="bio rv">Psicóloga, com mais de 15 anos de atuação no mundo corporativo, Fabi transformou a própria vivência em RH num movimento: uma comunidade que aproxima profissionais, empresas e marcas e coloca o Nordeste no centro da conversa sobre gestão de pessoas.</p>
+      <ul class="cred rv">
+        <li><span>Formação</span>Psicóloga, com mais de 15 anos no mundo corporativo</li>
+        <li><span>Especialidade</span>Carreira, gestão estratégica de pessoas e R&amp;S</li>
+        <li><span>Na mídia</span>Convidada do Bom Dia PE, da TV Globo Pernambuco, para falar sobre currículo e reputação no mercado (nov. 2026)</li>
+        <li><span>No setor</span>Embaixadora do CONGREPARH 2026 · ABRH Paraíba</li>
+        <li><span>Audiência</span>18 mil+ seguidores em @rhporfabi</li>
+        <li><span>Atua com</span>Consultoria · Palestras · Mentoria de carreira · Publicidade</li>
+      </ul>
+      <div class="fabi-cta rv">
+        <a class="btn btn-coral" href="https://api.whatsapp.com/send?phone=5581996018990&amp;text=Ol%C3%A1%2C%20Fabi!%20Vim%20pelo%20site%20do%20Oxente%2C%20RH!%20e%20quero%20falar%20sobre%20palestra%2Fconsultoria." target="_blank" rel="noopener">Levar a Fabi para minha empresa <svg><use href="#arr"/></svg></a>
+        <a class="btn btn-line" href="https://www.instagram.com/rhporfabi/" target="_blank" rel="noopener">@rhporfabi</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PARTICIPAR -->
+<section class="part" id="participar">
+  <div class="wrap">
+    <h2 class="rv">Pra ser Oxenteiro, não precisa de convite.</h2>
+    <p class="lead rv">Precisa ter vontade de fazer parte. Escolha a sua porta de entrada:</p>
+    <div class="paths">
+      <a class="path rv" href="https://linktr.ee/oxenterh" target="_blank" rel="noopener"><span class="n">1</span><h3>Vá a um encontro</h3><p>Garanta sua vaga no próximo encontro ou entre na lista de espera das próximas edições.</p><span class="go">Ver encontros <svg><use href="#arr"/></svg></span></a>
+      <a class="path rv" href="https://linktr.ee/oxenterh" target="_blank" rel="noopener"><span class="n">2</span><h3>Seja Embaixador(a)</h3><p>Represente a comunidade, leve o Oxente, RH! para a sua rede e ajude a construir as próximas edições.</p><span class="go">Aplicar <svg><use href="#arr"/></svg></span></a>
+      <a class="path rv" href="https://linktr.ee/oxenterh" target="_blank" rel="noopener"><span class="n">3</span><h3>Suba ao palco</h3><p>Tem uma história ou um conteúdo para compartilhar? Candidate-se como palestrante Inspiração ou Transformação.</p><span class="go">Quero palestrar <svg><use href="#arr"/></svg></span></a>
+      <a class="path rv" href="https://api.whatsapp.com/send?phone=5581996018990&amp;text=Ol%C3%A1!%20Quero%20conectar%20minha%20marca%20ao%20Oxente%2C%20RH!" target="_blank" rel="noopener"><span class="n">4</span><h3>Conecte sua marca</h3><p>Patrocínio, apoio e presença nos encontros para marcas e soluções que falam com o RH do Nordeste.</p><span class="go">Falar sobre parceria <svg><use href="#arr"/></svg></span></a>
+    </div>
+
+    <div class="voz rv">
+      <img src="img/abraco.webp" alt="" loading="lazy" aria-hidden="true">
+      <blockquote>“Mais oxenteira do que nunca. Super feliz por fazer parte dessa comunidade arretada.”<cite>Participante da comunidade Oxente, RH!</cite></blockquote>
+    </div>
+  </div>
+</section>
+
+<!-- APOIADORES -->
+<section class="apoio" aria-label="Marcas que já se conectaram ao Oxente, RH!">
+  <div class="wrap"><p class="lbl">Marcas que já caminharam com o Oxente, RH!</p></div>
+  <div class="marq"><div class="marq-in">
+    <span>Aratu Seguros</span><span>Gustare Buffet Corporativo</span><span>Atlântico Restaurante e Pizzaria</span><span>Arrudêa Eventos</span><span>Renato Moura Fotografia</span><span>One Auditório</span>
+    <span aria-hidden="true">Aratu Seguros</span><span aria-hidden="true">Gustare Buffet Corporativo</span><span aria-hidden="true">Atlântico Restaurante e Pizzaria</span><span aria-hidden="true">Arrudêa Eventos</span><span aria-hidden="true">Renato Moura Fotografia</span><span aria-hidden="true">One Auditório</span>
+  </div></div>
+</section>
+
+<!-- FINAL -->
+<section class="final">
+  <div class="wrap">
+    <h2 class="rv">Bora se<br><span>oxentar?</span></h2>
+    <div class="final-row">
+      <p class="rv">Conexão, inspiração e transformação para quem faz RH no Nordeste. A próxima edição começa com você.</p>
+      <div class="hero-cta rv">
+        <a class="btn btn-coral" href="https://linktr.ee/oxenterh" target="_blank" rel="noopener">Quero participar <svg><use href="#arr"/></svg></a>
+        <a class="btn btn-line" href="https://www.instagram.com/oxente_rh/" target="_blank" rel="noopener">@oxente_rh</a>
+      </div>
+    </div>
+    <footer>
+      <a class="logo" href="#topo" aria-label="Oxente, RH! — voltar ao topo">
+        <svg viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true"><path d="M100 30 V0 H0 V86 H70 L60 100 L82 86 H100 V62" fill="none" stroke="#F2784B" stroke-width="2.2" vector-effect="non-scaling-stroke"/></svg>
+        <b>OXE</b><b>NTE,</b><b>RH!</b>
+      </a>
+      <nav aria-label="Rodapé">
+        <a href="#o-que-e">O que é</a><a href="#para-quem">Para quem é</a><a href="#formatos">Encontros</a><a href="#fabi">Fabi Assunção</a><a href="#participar">Participar</a>
+      </nav>
+      <div style="display:grid;gap:8px;text-align:right">
+        <a href="https://www.instagram.com/oxente_rh/" target="_blank" rel="noopener">Instagram</a>
+        <a href="https://linktr.ee/oxenterh" target="_blank" rel="noopener">Linktree</a>
+      </div>
+      <div class="legal"><span>© 2026 Comunidade Oxente, RH! · Conexão · Inspiração · Transformação</span><span>Proposta de site · Agência N4</span></div>
+    </footer>
+  </div>
+</section>
+</main>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script>
+(function(){
+  const reduced = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  document.body.classList.remove('no-js');
+  if(reduced) document.body.classList.add('reduced');
+
+  /* nav */
+  const nav=document.getElementById('nav'); let lastY=0;
+  addEventListener('scroll',()=>{const y=scrollY;nav.classList.toggle('solid',y>40);nav.classList.toggle('hide',y>lastY&&y>600);lastY=y},{passive:true});
+
+  const m=document.getElementById('manif');
+
+  /* pilares: troca de palavra */
+  const words=[...document.querySelectorAll('.p-words span')],dots=[...document.querySelectorAll('.p-dots i')];
+  let cur=0;
+  const setP=i=>{if(i===cur)return;words.forEach((w,k)=>{w.classList.toggle('on',k===i);w.classList.toggle('out',k<i)});dots.forEach((d,k)=>d.classList.toggle('on',k===i));cur=i};
+  const pw=document.querySelector('.p-words');
+  const fitP=()=>{if(!pw||!pw.offsetWidth)return;pw.style.fontSize='';const max=Math.max(...words.map(w=>w.scrollWidth));const avail=pw.clientWidth;if(max>avail){pw.style.fontSize=(parseFloat(getComputedStyle(pw).fontSize)*avail/max*.98)+'px'}};
+  fitP();addEventListener('resize',fitP);document.fonts&&document.fonts.ready.then(fitP);
+  const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)setP(+e.target.dataset.i)}),{rootMargin:'-45% 0px -45% 0px'});
+  document.querySelectorAll('.p-item').forEach(el=>io.observe(el));
+
+  const bub=document.getElementById('bubPath');
+  const drawBub=()=>{const sv=bub.ownerSVGElement,r=sv.getBoundingClientRect(),w=Math.round(r.width),h=Math.round(r.height),t=Math.round(h*.15),b=h-t;
+    sv.setAttribute('viewBox',`0 0 ${w} ${h}`);
+    bub.setAttribute('d',`M${w} ${Math.round(b*.3)} V1.5 H1.5 V${b} H${Math.round(w*.6)} L${Math.round(w*.53)} ${h-1} L${Math.round(w*.72)} ${b} H${w} V${Math.round(b*.66)}`)};
+  drawBub(); addEventListener('resize',drawBub); document.fonts&&document.fonts.ready.then(drawBub);
+
+  if(reduced||!window.gsap){
+    document.body.classList.add('reduced');
+    return;
+  }
+  gsap.registerPlugin(ScrollTrigger);
+
+  /* hero intro */
+  bub.style.strokeDasharray=1; bub.style.strokeDashoffset=1;
+  const tl=gsap.timeline({defaults:{ease:'expo.out'}});
+  tl.from('.hero-img img',{scale:1.14,duration:2.2,ease:'power3.out'},0)
+    .from('.h1 .ln>span',{yPercent:110,duration:1.3,stagger:.1},.2)
+    .add(()=>document.querySelector('.h1 .ln:last-child').classList.add('open'),.85)
+    .to(bub,{strokeDashoffset:0,duration:1.4,ease:'power2.inOut'},.9)
+    .from('.hero-sub,.hero-cta,.facts>div',{y:24,opacity:0,duration:1,stagger:.06},.7);
+
+  /* hero saída com scroll */
+  gsap.to('.hero-img img',{yPercent:12,scale:1.06,ease:'none',scrollTrigger:{trigger:'.hero',start:'top top',end:'bottom top',scrub:true}});
+  gsap.to('.hero .wrap',{y:-80,opacity:.15,ease:'none',scrollTrigger:{trigger:'.hero',start:'35% top',end:'bottom top',scrub:true}});
+
+  /* reveals */
+  gsap.utils.toArray('.rv').forEach(el=>{
+    gsap.to(el,{opacity:1,y:0,duration:1.1,ease:'expo.out',scrollTrigger:{trigger:el,start:'top 88%'}});
+  });
+
+  /* manifesto: linhas sobem uma vez */
+  gsap.from('#manif .ln>span',{yPercent:105,duration:1.2,stagger:.09,ease:'expo.out',scrollTrigger:{trigger:m,start:'top 80%'}});
+
+  /* imagens dos pilares: leve parallax interno */
+  gsap.utils.toArray('.p-item figure img').forEach(img=>{
+    gsap.fromTo(img,{scale:1.12,yPercent:-4},{scale:1,yPercent:4,ease:'none',scrollTrigger:{trigger:img,start:'top bottom',end:'bottom top',scrub:true}});
+  });
+
+  /* galeria horizontal (desktop) */
+  const mm=gsap.matchMedia();
+  mm.add('(min-width: 761px)',()=>{
+    const track=document.getElementById('track');
+    const dist=()=>Math.max(0,track.scrollWidth-innerWidth);
+    gsap.to(track,{x:()=>-dist(),ease:'none',scrollTrigger:{trigger:'.edicoes',start:'top top',end:()=>'+='+dist(),pin:'.ed-pin',scrub:.8,invalidateOnRefresh:true,anticipatePin:1}});
+    gsap.to('#edBar',{scaleX:1,ease:'none',scrollTrigger:{trigger:'.edicoes',start:'top top',end:()=>'+='+dist(),scrub:true,invalidateOnRefresh:true}});
+  });
+
+  /* fabi: segunda imagem desloca */
+  gsap.fromTo('.fabi-media .sec',{y:80},{y:-40,ease:'none',scrollTrigger:{trigger:'.fabi',start:'top bottom',end:'bottom top',scrub:true}});
+
+  /* título final */
+  gsap.from('.final h2',{letterSpacing:'0.04em',ease:'none',scrollTrigger:{trigger:'.final',start:'top 90%',end:'top 30%',scrub:true}});
+
+  addEventListener('load',()=>ScrollTrigger.refresh());
+})();
+</script>
+</body>
+</html>
